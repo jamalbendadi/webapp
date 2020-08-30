@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Web app</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand navbar-light">
+        <a class="navbar-brand font-italic font-weight-lighter" href="#">Landen trivia</a>
+        
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <span class="nav-link" name="home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <span class="nav-link" name="nieuw">Nieuw</a>
+                </li>
+                <li class="nav-item">
+                    <span class="nav-link" href="#" name="zoek">Zoek</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <main class="container p-4">
+        <div id="fetchError" style="display: none;text-align: center;">
+            <div class="alert alert-warning" style="display: inline-block; width: 55%;">
+                <p>REST service is niet beschikbaar</p>
+            </div>
+        </div>
+        <!-----------------------------home---------------------------------------------------------->
+        <section id="home">
+            <h2 style="margin-bottom: 20px;">Landen</h2>
+
+            <div id="card_list" class="row justify-content-center">
+                
+            </div>
+        </section>
+        <!----------------------------nieuw----------------------------------------------------------->
+        <section id="nieuw" style="display:none">
+            <h2>Nieuw</h2>
+            <div style="text-align: center; display: none;" id="addSucces">
+
+            </div>
+            <div style="text-align: center; display: none;" id="addResult">
+
+            </div>
+            <form id="nieuw_country">
+                <div class="form-group">
+                    <label for="countryNamePost">Country name</label>
+                    <input type="text" class="form-control" id="countryNamePost" name="countryNamePost"
+                        required="true" />
+                </div>
+                <div class="form-group">
+                    <label for="OfficialNamePost">Official name</label>
+                    <input type="text" class="form-control" id="officialNamePost" name="countryNamePost"
+                        required="true" />
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-lg-8">
+                        <label for="dateOfIndependencePost">Date of independence:</label>
+                        <input type="date" class="form-control" id="dateOfIndependencePost"
+                            name="dateOfIndependencePost" required="true" />
+                    </div>
+                    <div class="form-group col-lg-4">
+                        <label for="popInMilPost">Population in millions</label>
+                        <input type="number" class="form-control" id="popInMilPost" name="popInMilPost"
+                            required="true" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="flagUrl">Flag (url)</label>
+                    <input type="url" class="form-control" id="flagUrlPost" name="flagUrlPost" required="true" />
+                </div>
+                <div style="flex: 2; text-align: center;">
+                    <button type="submit" class="btn btn-primary" id="btn" style="width: 10em; margin-top: 2%;">
+                        Submit
+                    </button>
+                </div>
+                </div>
+            </form>
+        </section>
+        <!----------------------------zoek----------------------------------------------------------->
+        <section id="zoek" style="display:none">
+            <h2>Zoeken</h2>
+            <input class="form-control" type="search" id="search">
+            <table class="table mt-5">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Naam</th>
+                        <th scope="col">Volledige naam</th>
+                        <th scope="col">Onafhankelijkheid</th>
+                        <th scope="col">Bevolking in miljoenen</th>
+                        <th scope="col">Vlag</th>
+                    </tr>
+                </thead>
+                <tbody id="searchItems" class="bg-light">
+
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <!----------------------------footer----------------------------------------------------------->
+    <footer class="footer container-fluid navbar-expand">
+        <div class="container-fluid">
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <span>Jamal Bendadi</span>
+                </div>
+                <div class="col-md-4">
+                    <label>Rozenstraat 50, Lokeren</label>
+                </div>
+                <div class="col-md-4">
+                    <a href="mailto: jamal.b@outlook.com"><i class="fas far fa-envelope"></i></a>
+                    <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

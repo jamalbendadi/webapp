@@ -1,0 +1,52 @@
+@use '_variables' as *;
+@use '_mixins' as *;
+$enable-responsive-font-sizes : true;
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: $primarycolor;
+  } 
+  nav {
+    flex-shrink: 1;
+    background-color: $secondarycolor;
+    @include shadow
+  }
+  .card{
+     @include shadow
+  }
+  footer {
+    flex: "flex-shrink";
+    margin-top: 40px;
+    padding-top: 5px;
+    background-color: $secondarycolor;
+  }
+  .fas,.fab{
+    text-decoration: none;
+    color: $tertiarycolor;
+  }
+  thead{
+    background-color: $tertiarycolor;
+  }
+  table{
+    @include shadow;
+  }
+  main {
+    flex: 2;
+  }
+  
+  .nav-link {
+    cursor: pointer;
+  }
+  
+  @media (min-width: 768px) {
+  }
+  
+  /* Medium devices (desktops, 992px and up) */
+  @media (min-width: 992px) {
+  }
+  
+  /* Large devices (large desktops, 1200px and up) */
+  @media (min-width: 1200px) {
+  }
+  
